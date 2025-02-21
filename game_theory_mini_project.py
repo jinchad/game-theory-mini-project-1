@@ -68,7 +68,6 @@ def choose_random_node(node1: TreeNode, node2: TreeNode) -> TreeNode:
         return node1
     else:
         return node2
-    pass
 
 def better_node(node1: TreeNode, node2: TreeNode, turn: str) -> TreeNode:
     if turn == "1":
