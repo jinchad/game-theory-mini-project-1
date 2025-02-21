@@ -132,9 +132,15 @@ def visualize_binary_tree(root: TreeNode, spe_node: TreeNode) -> None:
     dot.render('binary_tree', view=True, format='png')
 
 if __name__ == "__main__":
-    root, leaf_nodes = build_tree(5)
-    parent_leaf_nodes = find_parent_nodes(leaf_nodes)
-    spe_node = find_best(root)
-    print(spe_node.payoff)
-    visualize_binary_tree(root, spe_node)
+
+    try:
+        user_input = int(input("Enter the number of stages you wish to generate:"))
+        root, leaf_nodes = build_tree(user_input)
+        parent_leaf_nodes = find_parent_nodes(leaf_nodes)
+        spe_node = find_best(root)
+        print("This is the reasonable Nash Equilibrium node", spe_node.payoff)
+        visualize_binary_tree(root, spe_node)
+    except ValueError:
+        print("Input a valid integer!")
+    
 
