@@ -11,6 +11,8 @@ The number of child nodes per stage is randomly generated using the random Pytho
 
 Each parent node is guaranteed to have at least 2 child nodes, each representing the two options available for the current player.
 
+This project also assumes that player 1 will make his move first, and each player will be granted a move after the previous player until m turns. 
+
 ## Algorithm approach
 The approach of the "divide and conquer" algorithm starts from the root node of the binary tree. It iteratively checks if the current node is a leaf node. As each parent node is guaranteed to have at 2 children, this algorithm will then compare the 2 leaf nodes of the parent node and return the node with a better payoff for the current player. 
 
@@ -55,3 +57,7 @@ pip install -r requirements.txt
 ```
 
 ### 4. Run the project at game_theory_mini_project.py
+
+## Declaration of use of AI
+
+ChatGPT 4.o was used to help with providing hints on how to use the graphviz module to generate the visualization of the graph. Everything else from the algorithm to the doc strings are written manually without any help from AI tools. 
